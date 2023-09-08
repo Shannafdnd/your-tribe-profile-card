@@ -104,15 +104,21 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 position: relative; 
-left: 350px; 
-bottom: 140px
+left: 330px; 
+bottom: -60px
 }
  
 #github-logo{
-position: relative; 
-
+position: relative; left: 670px; top: -33px;
+scale: 1.2;
 }
 
-#logos {
-  position: relative;
+#insta-logo {
+  position: relative; left: 750px; top: -33px;
+  scale: 1.2;
+}
+
+#gmail-logo {
+  position: relative; left: 830px; top: -33px;
+  scale: 1.2;
 }
