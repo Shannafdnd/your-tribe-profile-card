@@ -1,22 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@700&display=swap');
 
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
 body {
   height: 100%;
   width: 100%;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .card {
-  width: 907px;
-  height: 523px;
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 7/4;
   border-radius: 36px;
   background: linear-gradient(0deg, rgba(190, 124, 255, 0.20) 0%, rgba(190, 124, 255, 0.20) 100%), url(<path-to-image>), lightgray 50% / cover no-repeat;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   background-image: url("../assets/Rectangle\ 10.png");
   overflow: hidden;
-  position: relative; top: 100px;
+  position: relative;
 }
 
 .shapes * {
@@ -24,11 +32,13 @@ body {
 }
 
 .background-rectangle {
-  top: 250px;
-  left: 235px;
-  width: 711px;
-  height: 122px;
+  top: 45%;
+  left: 25%;
+  width: 75%;
+  height: 24%;
   background-color: #FFD6EE;
+  display: flex;
+  justify-content: end;
 }
 
 .profile {
@@ -45,30 +55,34 @@ body {
   background-position: 0px -25px;
 }
 
- h1{
-  display: flex;
-width: 363px;
-height: 150px;
-flex-direction: column;
-justify-content: flex-end;
-position: relative; left: 320px; bottom: -20px;
-color: #CA4DB6;
-text-align: center;
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-font-family: 'MuseoModerno', cursive;
-font-size: 80px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
- }
-
- h2{
+h1 {
   display: flex;
   width: 363px;
   height: 150px;
   flex-direction: column;
   justify-content: flex-end;
-  position: relative; left: 320px; bottom: -80px;
+  position: relative;
+  left: 320px;
+  bottom: -20px;
+  color: #CA4DB6;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: 'MuseoModerno', cursive;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+h2 {
+  display: flex;
+  width: 363px;
+  height: 150px;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  left: 320px;
+  bottom: -80px;
   color: #CA4DB6;
   text-align: center;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -78,58 +92,61 @@ line-height: normal;
   font-weight: 700;
   line-height: normal;
   @import url();
- }
+}
 
- h3{
+h3 {
   color: #CA4DB6;
-font-family: MuseoModerno;
-font-size: 32px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-position: relative;left: 400px; bottom: -5px
- }
-
-p{
-  display: flex;
-width: 333px;
-height: 25px;
-flex-direction: column;
-justify-content: center;
-color: #000;
-text-align: center;
-font-family: MuseoModerno;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-position: relative; 
-left: 330px; 
-bottom: -60px
-}
- 
-#github-logo{
-position: relative; left: 670px; top: -33px;
-scale: 1.2;
+  font-family: MuseoModerno;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  position: relative;
+  left: 400px;
+  bottom: -5px
 }
 
-.shapes:hover {
-  scale:2;
+.subtitle {
+  align-self: end;
+  justify-content: end;
+  font-family: MuseoModerno;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
 }
 
-
-#insta-logo {
-  position: relative; left: 750px; top: -33px;
-  scale: 1.2;
+#logos {
+  align-self: center;
+  justify-content: end;
+  z-index: 1;
 }
 
-#gmail-logo {
-  position: relative; left: 830px; top: -33px;
-  scale: 1.2;
+.background-rectangle * {
+  position: sticky;
 }
 
-@keyframes .shapes {
-  0% {left:0px; top:0px;}
-  25% {left: 100px; top:100px;}
-  100% {left: 0px; top: 500px;}
+.logo {
+  margin-right: 10%;
+}
+
+.logo:hover {
+  scale: 1.5;
+}
+
+@keyframes shapes {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+
+  25% {
+    left: 100px;
+    top: 100px;
+  }
+
+  100% {
+    left: 0px;
+    top: 500px;
+  }
 }
