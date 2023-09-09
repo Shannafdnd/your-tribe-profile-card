@@ -113,6 +113,11 @@ position: relative; left: 670px; top: -33px;
 scale: 1.2;
 }
 
+.shapes:hover {
+  scale:2;
+}
+
+
 #insta-logo {
   position: relative; left: 750px; top: -33px;
   scale: 1.2;
@@ -121,4 +126,10 @@ scale: 1.2;
 #gmail-logo {
   position: relative; left: 830px; top: -33px;
   scale: 1.2;
+}
+
+@keyframes .shapes {
+  0% {left:0px; top:0px;}
+  25% {left: 100px; top:100px;}
+  100% {left: 0px; top: 500px;}
 }
